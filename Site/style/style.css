@@ -1,0 +1,207 @@
+body {
+  margin: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(to right, #C8E8E8,#C2B2CE);
+}
+h1{
+ text-align: center;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding:0;
+	background: #565656;
+	position: fixed;
+	top: 0;
+	width: 100%;
+  border-radius: 20px;
+
+}
+li {  
+	float: left;
+}
+li a {
+	display: block;
+	color: rgb(255, 192, 203);
+	text-align: center;
+	padding: 5px 0px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+li a:hover {
+	background-color: rgb(0,139,139);
+}
+li a.active {
+  background-color: rgba(172, 172, 172, 0.85);
+  border-radius: 5px;
+  padding: 5px 5px;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #ACACAC;
+  border-radius: 5px;
+  padding: 5px 5px;
+  color: white;
+}
+
+
+:root{
+  --hauteur-menu: 60px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Montserrat, sans-serif;
+}
+
+nav {
+  width: 100%;
+  font-size: 18px;
+  position: sticky;
+  top: 0;
+}
+
+nav > ul {
+  display: flex;
+  text-align: center;
+  box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.3);
+  height: var(--hauteur-menu);
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav > ul > li {
+  background-color:  #565656;
+  position: relative;
+  height: 100%;
+  flex: 1;
+}
+
+nav > ul > li:hover > a{
+  color: black;
+}
+
+nav > ul > li > a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+}
+
+.menu-deroulant > a:after{
+  content: '❯';
+  font-size: 15px;
+  margin-left: 7px;
+  display: inline-block;
+}
+
+.menu-deroulant:hover > a:after{
+  animation: rotationFleche 0.2s linear forwards;
+}
+
+@keyframes rotationFleche {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  100%{
+    transform: rotate(90deg);
+  }
+}
+
+.sous-menu {
+  margin-top: var(--hauteur-menu);
+  width: 250px;
+  text-align: left;
+  overflow: hidden;
+  max-height: 0;
+  border-radius: 20px;
+  background-color:  #565656;
+}
+
+.menu-deroulant:hover > .sous-menu {
+  animation: apparitionSousMenu 2s forwards;
+}
+
+@keyframes apparitionSousMenu {
+  0% {
+    box-shadow: 0px 3px 3px 1px rgba(0,0,0,0);
+    border-top: 5px solid #D26466;
+  }
+  30% {
+    box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+  }
+  100% {
+    max-height: 50em;
+    border-top: 5px solid white;
+    box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+  }
+}
+
+.sous-menu > li:hover {
+  background-color: rgba(33, 105, 236, 0.3);
+}
+
+.sous-menu > li > a {
+  align-items: center;
+  display: flex;
+  height: 50px;
+  padding-left: 20px;
+  width: 100%;
+}
+
+.sous-menu > li:hover > a {
+  color: white;
+}
+.logo {
+ padding: 0px 0px;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.repeating-linear {
+  color: pink;
+  border: 10px solid pink;
+  border-image: repeating-linear-gradient(45deg, green, green 1%, cyan 1%, cyan 8%) 10;
+}
+.repeating-linear:hover {
+  border-image: repeating-linear-gradient(45deg, cyan, cyan 1%, green 1%, green 8%) 10;
+  color: purple;
+}
+div {
+  margin: 4em auto;
+  width: 600px;
+  height: auto;
+}
+h3{
+  margin: 8px;
+}
+h2{
+  margin: 8px;
+}
+.repeating-linear2 {
+  color: pink;
+  border: 10px solid pink;
+  border-image: repeating-linear-gradient(45deg, green, green 1%, cyan 1%, cyan 8%) 10;
+}
+.repeating-linear2:hover {
+  border-image: repeating-linear-gradient(45deg, cyan, cyan 1%, green 1%, green 8%) 10;
+  color: purple;
+}
+.fin{
+  margin-top: -90px;
+  margin-bottom: -120px;
+}
